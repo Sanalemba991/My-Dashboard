@@ -58,20 +58,21 @@ const App = () => {
 
   return (
     <div>
-      <div>
-        <h2>Dashboard For Sumedha International School</h2>
-        {deleteMessage && <p>{deleteMessage}</p>}
-        <ul id="userList">
-          {userDetails.map((user, index) => (
-            <li key={index}>
-              <strong className="name">Name:</strong> {user.name} <br />
-              <strong className="name">Email:</strong> {user.email} <br />
-              <strong className="name">Subject:</strong> {user.subject} <br />
-              <strong className="name">Message:</strong> {user.message}
-            </li>
-          ))}
-        </ul>
-      </div>
+     <div>
+  <h2>Dashboard For Sumedha International School</h2>
+  {deleteMessage && <p>{deleteMessage}</p>}
+  <ul id="userList">
+    {userDetails.map((user, index) => (
+      <li key={index}>
+        <strong className="name">Name:</strong> <span style={{ color: 'white' }}>{user.name}</span> <br />
+        <strong className="name">Email:</strong> <span style={{ color: 'white' }}>{user.email}</span> <br />
+        <strong className="name">Subject:</strong> <span style={{ color: 'white' }}>{user.subject}</span> <br />
+        <strong className="name">Message:</strong> <span style={{ color: 'white' }}>{user.message}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
       <div>
         <h3>Delete  Details</h3>

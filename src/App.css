@@ -97,6 +97,10 @@ p.error {
   color: #931f2d;
   font-weight: bold;
 }
+#userList li .user {
+  color: white;
+}
+
 
 
 form {
@@ -107,7 +111,7 @@ label {
   font-size: 1.125rem;
   margin-bottom: 10px;
   display: block;
-  color: #ffffff;
+  color: #931f2d;
 }
 
 input[type="email"] {
@@ -143,6 +147,12 @@ button:hover {
 .name{
   color: #ffffff;
 }
+
+
+.userList li .user-data {
+  color: white;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
