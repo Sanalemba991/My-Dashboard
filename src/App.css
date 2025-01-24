@@ -9,17 +9,21 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f9fafb;
+  background-image: url('https://media.istockphoto.com/id/1072470136/photo/students-learning-computer-programming-stock-image.jpg?s=2048x2048&w=is&k=20&c=0ptHfPj_lvikw0HvljoK6drTyCuKOq8GbVp9LAAb-kg='); /* Add your image URL here */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Position the image at the center */
   color: #444;
   line-height: 1.6;
   padding: 20px;
 }
+
 
 /* Main container styling */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -32,16 +36,17 @@ body {
 
 /* Header styling */
 h2 {
-  color: #16a085;
-  font-size: 2.25rem;
+  color:#931f2d;
+  font-size: 3.25rem;
   font-weight: bold;
   margin-bottom: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
 
 }
 
 h3 {
-  color: #16a085;
+  color: #931f2d;
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 15px;
@@ -58,12 +63,12 @@ p {
 }
 
 p.success {
-  background-color: #2ecc71;
+  background-color: #931f2d;
   color: #fff;
 }
 
 p.error {
-  background-color: #e74c3c;
+  background-color: #931f2d;
   color: #fff;
 }
 
@@ -74,7 +79,7 @@ p.error {
 }
 
 #userList li {
-  background-color: #ecf0f1;
+  background-color: rgba(0, 0, 0, 0.05);  /* Light transparent black background */
   padding: 18px;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -82,13 +87,14 @@ p.error {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 #userList li:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 #userList li strong {
-  color: #16a085;
+  color: #931f2d;
   font-weight: bold;
 }
 
@@ -101,7 +107,7 @@ label {
   font-size: 1.125rem;
   margin-bottom: 10px;
   display: block;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 input[type="email"] {
@@ -120,7 +126,7 @@ input[type="email"]:focus {
 }
 
 button {
-  background-color: #16a085;
+  background-color: red;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -131,8 +137,11 @@ button {
 }
 
 button:hover {
-  background-color: #1abc9c;
+  background-color: #8d2424;
   transform: translateY(-2px);
+}
+.name{
+  color: #ffffff;
 }
 
 /* Responsive Design */

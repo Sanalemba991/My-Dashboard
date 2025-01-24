@@ -59,15 +59,15 @@ const App = () => {
   return (
     <div>
       <div>
-        <h2>Dashboard</h2>
+        <h2>Dashboard For Sumedha International School</h2>
         {deleteMessage && <p>{deleteMessage}</p>}
         <ul id="userList">
           {userDetails.map((user, index) => (
             <li key={index}>
-              <strong>Name:</strong> {user.name} <br />
-              <strong>Email:</strong> {user.email} <br />
-              <strong>Subject:</strong> {user.subject} <br />
-              <strong>Message:</strong> {user.message}
+              <strong className="name">Name:</strong> {user.name} <br />
+              <strong className="name">Email:</strong> {user.email} <br />
+              <strong className="name">Subject:</strong> {user.subject} <br />
+              <strong className="name">Message:</strong> {user.message}
             </li>
           ))}
         </ul>
