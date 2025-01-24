@@ -7,16 +7,15 @@
 
 /* Body styling */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f9fafb;
-  background-image: url('https://media.istockphoto.com/id/1072470136/photo/students-learning-computer-programming-stock-image.jpg?s=2048x2048&w=is&k=20&c=0ptHfPj_lvikw0HvljoK6drTyCuKOq8GbVp9LAAb-kg='); /* Add your image URL here */
+
   background-size: cover; /* Ensure the image covers the entire background */
   background-position: center; /* Position the image at the center */
   color: #444;
   line-height: 1.6;
   padding: 20px;
 }
-
 
 /* Main container styling */
 .container {
@@ -36,13 +35,12 @@ body {
 
 /* Header styling */
 h2 {
-  color:#931f2d;
+  color: #931f2d;
   font-size: 3.25rem;
   font-weight: bold;
   margin-bottom: 25px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
-
 }
 
 h3 {
@@ -51,7 +49,6 @@ h3 {
   font-weight: 500;
   margin-bottom: 15px;
 }
-
 
 p {
   background-color: #ecf0f1;
@@ -72,21 +69,24 @@ p.error {
   color: #fff;
 }
 
-
 #userList {
   list-style: none;
   padding: 0;
 }
 
 #userList li {
-  background-color: rgba(0, 0, 0, 0.05);  /* Light transparent black background */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light transparent black background */
   padding: 18px;
   border-radius: 10px;
   margin-bottom: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 #userList li:hover {
   transform: translateY(-5px);
@@ -100,8 +100,6 @@ p.error {
 #userList li .user {
   color: white;
 }
-
-
 
 form {
   margin-top: 25px;
@@ -130,7 +128,7 @@ input[type="email"]:focus {
 }
 
 button {
-  background-color: red;
+  background-color: #931f2d;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -144,17 +142,151 @@ button:hover {
   background-color: #8d2424;
   transform: translateY(-2px);
 }
-.name{
-  color: #ffffff;
+.name {
+  color: black;
 }
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 90px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #6c0000;
+  transform: scale(1.05);
+}
+
+/* Disabled button state */
+.button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.pagination-container span {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
 
 .userList li .user-data {
   color: white;
 }
+/* Style for the Delete Details section */
+.h3delete {
+  font-size: 24px;
+  font-weight: bold;
+  color: #800000;  /* Maroon color for the heading */
+  margin-bottom: 20px;
+  text-align: center;  /* Center align the heading */
+}
+
+/* Style for the form container */
+#deleteForm {
+  display: flex;
+  flex-direction: column;
+  align-items: start;  /* Center the form elements */
+  background-color: #ffff;  /* Light background color for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for the form */
+  max-width: 400px;
+  margin: 0 auto;  /* Center the form horizontally */
+}
+
+/* Style for the label */
+#deleteForm label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;  /* Make label text bold */
+  text-align: left;  /* Align label to the left */
+  width: 100%;  /* Full width for label */
+}
+
+/* Style for the input field */
+.delete {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #800000;  /* Maroon border */
+  border-radius: 5px;
+  background-color: #f5f5f5;  /* Light gray background */
+  margin-bottom: 15px;
+ /* Remove outline on focus */
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+/* Focus effect for the input field */
 
 
-/* Responsive Design */
+/* Style for the delete button */
+#deleteForm button {
+  padding: 10px 20px;
+  background-color: #800000;  /* Maroon background for the button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;  /* Button takes full width */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the delete button */
+#deleteForm button:hover {
+  background-color: #6c0000;  /* Darker maroon on hover */
+  transform: scale(1.05);  /* Slight grow effect */
+}
+
+/* Disabled button state */
+#deleteForm button:disabled {
+  background-color: #d3d3d3;  /* Light gray background for disabled button */
+  cursor: not-allowed;  /* Disable the cursor */
+}
+
+
+/* Style for the search input */
+.search {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  border: 2px solid #800000;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.search:focus {
+  border-color: #6c0000;
+  box-shadow: 0 0 5px rgba(140, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+  .search {
+    width: 80%;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 30px;

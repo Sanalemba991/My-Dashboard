@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+
 const App = () => {
   const [userDetails, setUserDetails] = useState([]);
   const [emailToDelete, setEmailToDelete] = useState("");
   const [deleteMessage, setDeleteMessage] = useState("");
-  
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(3);
+  const [searchEmail, setSearchEmail] = useState("");  
+
   useEffect(() => {
-    // Fetch user details when the component is mounted
     fetch("http://localhost:4000/api/details")
       .then((response) => response.json())
       .then((data) => {
@@ -20,7 +23,8 @@ const App = () => {
         setDeleteMessage("Error fetching user details.");
         console.error("Error fetching user details:", error);
       });
-  }, []); // Empty dependency array means this runs once when the component mounts
+  }, []);
+
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -42,7 +46,7 @@ const App = () => {
         if (data.message) {
           setDeleteMessage(data.message);
           setEmailToDelete("");
-          // Remove user from state list
+      
           setUserDetails((prevDetails) =>
             prevDetails.filter((user) => user.email !== emailToDelete)
           );
@@ -56,30 +60,72 @@ const App = () => {
       });
   };
 
+
+  const handleSearchChange = (e) => {
+    setSearchEmail(e.target.value);
+    setCurrentPage(1); 
+  };
+
+
+  const filteredUsers = userDetails.filter((user) =>
+    user.email.toLowerCase().includes(searchEmail.toLowerCase())
+  );
+
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = filteredUsers.slice(indexOfFirstUser, indexOfLastUser);
+
+  const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
+
+  const handlePageChange = (newPage) => {
+    if (newPage > 0 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
+
   return (
     <div>
-     <div>
-  <h2>Dashboard For Sumedha International School</h2>
-  {deleteMessage && <p>{deleteMessage}</p>}
-  <ul id="userList">
-    {userDetails.map((user, index) => (
-      <li key={index}>
-        <strong className="name">Name:</strong> <span style={{ color: 'white' }}>{user.name}</span> <br />
-        <strong className="name">Email:</strong> <span style={{ color: 'white' }}>{user.email}</span> <br />
-        <strong className="name">Subject:</strong> <span style={{ color: 'white' }}>{user.subject}</span> <br />
-        <strong className="name">Message:</strong> <span style={{ color: 'white' }}>{user.message}</span>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
       <div>
-        <h3>Delete  Details</h3>
+        <h2>Dashboard For Sumedha International School</h2>
+        <div>
+        <h3>Search by Email</h3>
+        <input
+         className="search"
+          type="text"
+          placeholder="Search by email"
+          value={searchEmail}
+          onChange={handleSearchChange}
+        />
+      </div>
+        {deleteMessage && <p>{deleteMessage}</p>}
+        <ul id="userList">
+          {currentUsers.map((user, index) => (
+            <li key={index}>
+              <strong className="name">Name:</strong> <span style={{ color: 'black' }}>{user.name}</span> <br />
+              <strong className="name">Email:</strong> <span style={{ color: 'black' }}>{user.email}</span> <br />
+              <strong className="name">Subject:</strong> <span style={{ color: 'black' }}>{user.subject}</span> <br />
+              <strong className="name">Message:</strong> <span style={{ color: 'black' }}>{user.message}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div>
+          <button className="button" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <span> Page {currentPage} of {totalPages} </span>
+          <button className="button" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
+      </div>
+
+      <div className="sa">
+        <h3 className="h3delete">Delete Details</h3>
         <form id="deleteForm" onSubmit={handleDelete}>
           <label>
             Email to delete:
-            <input
+            <input className="delete"
               type="email"
               id="emailToDelete"
               value={emailToDelete}
@@ -89,6 +135,8 @@ const App = () => {
           <button type="submit">Delete</button>
         </form>
       </div>
+
+     
     </div>
   );
 };
