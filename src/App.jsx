@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
+import sume from "./sumedha.png";
 const App = () => {
   const [userDetails, setUserDetails] = useState([]);
   const [emailToDelete, setEmailToDelete] = useState("");
@@ -84,9 +84,9 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="sam">
       <div>
-        <h2>Dashboard For Sumedha International School</h2>
+        <h2>Dashboard For Sumedha International School<span><img className="sume" src={sume}></img></span></h2>
         <div>
         <h3>Search by Email</h3>
         <input
