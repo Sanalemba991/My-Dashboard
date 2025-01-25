@@ -121,10 +121,10 @@ const App = () => {
       </div>
 
       <div className="sa">
-        <h3 className="h3delete">Delete Details</h3>
+       <div className="h3delete"><h3 >Delete Details</h3></div>
         <form id="deleteForm" onSubmit={handleDelete}>
-          <label>
-            Email to delete:
+          <label >
+           <span className="de"> Email to delete:</span>
             <input className="delete"
               type="email"
               id="emailToDelete"
