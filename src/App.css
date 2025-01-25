@@ -9,7 +9,7 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: #f9fafb;
-
+  background-image: url("C:\Users\Kaizt\My Dashboard\src\school.jpg"); /* Use the correct path to the image */
   background-size: cover; /* Ensure the image covers the entire background */
   background-position: center; /* Position the image at the center */
   color: #444;
@@ -17,12 +17,13 @@ body {
   padding: 20px;
 }
 
+
 /* Main container styling */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px;
-  background-color: transparent;
+  background-color: white;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -75,12 +76,7 @@ p.error {
 }
 
 #userList li {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.05
-  ); /* Light transparent black background */
+  background-color:white; /* Light transparent black background */
   padding: 18px;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -257,6 +253,11 @@ button:hover {
 #deleteForm button:disabled {
   background-color: #d3d3d3;  /* Light gray background for disabled button */
   cursor: not-allowed;  /* Disable the cursor */
+}
+.sume{
+  width: 10%;
+  border-radius: 90px;
+  margin-left: 9px;
 }
 
 

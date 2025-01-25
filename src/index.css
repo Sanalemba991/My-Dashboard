@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background: url("C:\Users\Kaizt\My Dashboard\src\school.jpg");
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.sam{
+  background-image: url("https://www.greatschools.org/gk/wp-content/uploads/2014/03/The-school-visit-what-to-look-for-what-to-ask-1-750x325.jpg");
 }
 
 a {
@@ -29,9 +31,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: url("C:/Users/Kaizt/My Dashboard/src/school.jpg");
-  background-size: cover;  /* Optional: ensures the background covers the entire page */
-  background-position: center;  /* Optional: centers the background image */
 }
 
 h1 {
