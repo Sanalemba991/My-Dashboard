@@ -17,7 +17,6 @@ body {
   padding: 20px;
 }
 
-
 /* Main container styling */
 .container {
   max-width: 1100px;
@@ -76,7 +75,7 @@ p.error {
 }
 
 #userList li {
-  background-color:white; /* Light transparent black background */
+  background-color: white; /* Light transparent black background */
   padding: 18px;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -184,24 +183,74 @@ button:hover {
 }
 /* Style for the Delete Details section */
 .h3delete {
-  font-size: 24px;
-  font-weight: bold;
-  color: #800000;  /* Maroon color for the heading */
-  margin-bottom: 20px;
-  text-align: center;  /* Center align the heading */
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  background-image: url('your-image-path.jpg'); /* Add your image path here */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: cover; /* Ensure the image covers the entire element */
+  background-position: center center; /* Center the image within the element */
+  margin-left: 40%;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 30px;
+  line-height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 800;
+  transform-origin: left center;
+  transform: rotate(3deg);
+  /* Center align the heading */
+}
+
+@media (max-width: 1200px) {
+  .h3delete {
+    font-size: 45px;
+    margin-left: 35%;
+    padding: 25px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .h3delete {
+    font-size: 40px;
+    margin-left: 30%;
+    padding: 20px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h3delete {
+    font-size: 35px;
+    margin-left: 25%;
+    padding: 15px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .h3delete {
+    font-size: 30px;
+    margin-left: 20%;
+    padding: 10px;
+    line-height: 35px;
+  }
 }
 
 /* Style for the form container */
 #deleteForm {
   display: flex;
   flex-direction: column;
-  align-items: start;  /* Center the form elements */
-  background-color: #ffff;  /* Light background color for the form */
+  align-items: start; /* Center the form elements */
+  background-color: #ffff; /* Light background color for the form */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the form */
   max-width: 400px;
-  margin: 0 auto;  /* Center the form horizontally */
+  margin: 0 auto; /* Center the form horizontally */
 }
 
 /* Style for the label */
@@ -209,9 +258,9 @@ button:hover {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
-  font-weight: 600;  /* Make label text bold */
-  text-align: left;  /* Align label to the left */
-  width: 100%;  /* Full width for label */
+  font-weight: 600; /* Make label text bold */
+  text-align: left; /* Align label to the left */
+  width: 100%; /* Full width for label */
 }
 
 /* Style for the input field */
@@ -219,47 +268,45 @@ button:hover {
   padding: 10px 15px;
   width: 100%;
   font-size: 16px;
-  border: 2px solid #800000;  /* Maroon border */
+  border: 2px solid #800000; /* Maroon border */
   border-radius: 5px;
-  background-color: #f5f5f5;  /* Light gray background */
+  background-color: #f5f5f5; /* Light gray background */
   margin-bottom: 15px;
- /* Remove outline on focus */
+  /* Remove outline on focus */
   transition: border-color 0.3s ease, box-shadow 0.2s ease;
 }
 
 /* Focus effect for the input field */
 
-
 /* Style for the delete button */
 #deleteForm button {
   padding: 10px 20px;
-  background-color: #800000;  /* Maroon background for the button */
+  background-color: #800000; /* Maroon background for the button */
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  width: 100%;  /* Button takes full width */
+  width: 100%; /* Button takes full width */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover effect for the delete button */
 #deleteForm button:hover {
-  background-color: #6c0000;  /* Darker maroon on hover */
-  transform: scale(1.05);  /* Slight grow effect */
+  background-color: #6c0000; /* Darker maroon on hover */
+  transform: scale(1.05); /* Slight grow effect */
 }
 
 /* Disabled button state */
 #deleteForm button:disabled {
-  background-color: #d3d3d3;  /* Light gray background for disabled button */
-  cursor: not-allowed;  /* Disable the cursor */
+  background-color: #d3d3d3; /* Light gray background for disabled button */
+  cursor: not-allowed; /* Disable the cursor */
 }
-.sume{
+.sume {
   width: 10%;
   border-radius: 90px;
   margin-left: 9px;
 }
-
 
 /* Style for the search input */
 .search {
@@ -275,6 +322,10 @@ button:hover {
   background-color: #f5f5f5;
   color: #333;
   transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+.de {
+  color: #800000;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .search:focus {
